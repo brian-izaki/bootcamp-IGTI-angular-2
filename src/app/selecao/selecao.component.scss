@@ -7,5 +7,9 @@ $margin: 20px;
 }
 
 .selecao-opcoes {
-  padding: 0 $margin;
+  padding: 5px $margin;
+
+  input, label {
+    cursor: pointer;
+  }
 }

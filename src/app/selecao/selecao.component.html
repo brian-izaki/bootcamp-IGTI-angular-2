@@ -9,7 +9,7 @@
     <div class="selecao-opcoes" *ngFor="let opcao of opcoes; let i = index">
 
       <input [id]="opcao" [type]="escolhaAte > 1 ? 'checkbox' : 'radio'" [name]="titulo" [value]="opcao"
-        (click)="selectItens($event)" [disabled]="isDisabled(opcao)" />
+        (click)="selectItens($event)" [disabled]="escolhaAte > 1 ? isDisabled(opcao) : false" />
 
       <label [for]="opcao">{{opcao}}</label>
     </div>

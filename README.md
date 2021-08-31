@@ -1,6 +1,24 @@
 # CardapioAcai
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.1.
+Projeto com angular de um cardápio de açaí. Caso selecione a quantidade máxima de ingredientes, outros checkbox ficarão desabilitados.
+
+<br>
+<br>
+
+Conceitos utilizados e aprendidos:
+
+- sobre o TypeScript:
+
+  - ao tentar acessar o event de um evento deve-se usar o `$event`, dentro da função que é do evento, é uma variável inplicita no angular que permite acessar o valor de event.
+  - o event de um evento que envolve o mouse é do tipo `MouseEvent`
+  - o target.value pode apenas ser acessado caso faça o casting do target para o tipo `HTMLInputElement`.
+
+- sobre Angular:
+  - utilizado o **Event binding** para capturar os eventos de click nos inputs
+  - utilizado o **property binding** para utilizar expressões e assim tornar a aplicação dinâmica.
+  - utilizado o **input property** para que o componente seleção pudesse receber atributos quando chamasse o componente, foi passado o _titulo, tamanhos e ingredientes_ para montar um açaí.
+  - foi tbm utilizado a diretiva `if` para mostrar um texto com as quantidades de ingrediente selecionados
+  - e a diretiva `for`, foi utilizada para renderizar as lista de ingredientes que foi passado pelo input property para o componente seleção.
 
 ## Development server
 
@@ -9,19 +27,3 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
