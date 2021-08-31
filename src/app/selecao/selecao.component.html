@@ -1,0 +1,18 @@
+<section>
+  <div>
+    <div class="selecao-titulo">
+      <h3> {{titulo}} </h3>
+      <p *ngIf="escolhaAte > 1">Escolha até {{escolhaAte}}
+        <span *ngIf="selectedItens.length > 0"> (Selecionados: {{selectedItens.length}}) </span>
+      </p>
+    </div>
+    <div class="selecao-opcoes" *ngFor="let opcao of opcoes; let i = index">
+
+      <input [id]="opcao" [type]="escolhaAte > 1 ? 'checkbox' : 'radio'" [name]="titulo" [value]="opcao"
+        (click)="selectItens($event)" [disabled]="isDisabled(opcao)" />
+
+      <label [for]="opcao">{{opcao}}</label>
+    </div>
+
+  </div>
+</section>
